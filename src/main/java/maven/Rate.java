@@ -5,5 +5,6 @@ public class Rate {
 //    public String effectiveDate;
     public double mid;
     public String currency;
+    public String code;
 
 }
