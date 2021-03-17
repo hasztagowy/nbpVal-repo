@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Connect {
 	
-	public String aaz(String urlText) {
+	public String connectToNBP(String urlText) {
 		 try {
              URL myUrl = new URL(urlText);
              StringBuilder jsonText = new StringBuilder();

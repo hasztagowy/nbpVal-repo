@@ -1,26 +1,34 @@
 package maven;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class SavedokumentService {
 	
-	Currency curr= new Currency();
 	
 	
-	public BigDecimal addUSD(int z) {
+	public static BigDecimal convertToPLN(int z) {
 		
 		BigDecimal bg=new BigDecimal(z);
 		
-		return curr.printOneCurr(bg);
+		return CurrencyMethods.printOneCurr(bg);
 	}
 	
-	public BigDecimal addOtherCurr(int z, String curr_name) {
+	public static BigDecimal convertToPLN(int z, String curr_code) {
 		
 		BigDecimal bg=new BigDecimal(z);
 		
 		
-		return curr.printOneCurr(bg,curr_name);
+		return CurrencyMethods.printOneCurr(bg,curr_code);
 	}
+	public static BigDecimal convertTPLN(int value,String curr_code,LocalDate localDate) {
+		
+		BigDecimal bg=new BigDecimal(value);
+		
+		return CurrencyMethods.printOneCurr(bg, curr_code, localDate);
+	}
+	
+	
 	
 	
 
