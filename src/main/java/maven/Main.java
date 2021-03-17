@@ -9,7 +9,7 @@ public class Main {
 		System.out.println(SavedokumentService.convertToPLN(20));
 		
 		System.out.println(SavedokumentService.convertToPLN(10, "eur"));
-		System.out.println(SavedokumentService.convertTPLN(10, "eur",LocalDate.parse("2016-04-04")));
+		System.out.println(SavedokumentService.convertTPLN(10, "eur",LocalDate.parse("2021-03-14")));
 		
 
 	}
