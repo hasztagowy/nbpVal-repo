@@ -1,4 +1,6 @@
-package maven;
+package maven.entity;
+
+import java.math.BigDecimal;
 
 public class Currency {
 	private String table;
@@ -24,6 +26,7 @@ public class Currency {
 	public void setRates(Rate[] rates) {
 		this.rates = rates;
 	}
+
 	
 
 }

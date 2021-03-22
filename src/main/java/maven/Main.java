@@ -1,15 +1,27 @@
 package maven;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+
+import maven.connector.FileConnector;
+import maven.service.SavedokumentService;
+import maven.valid.DateValidator;
 
 public class Main {
 	public static void main(String[] args) {
+
+		SavedokumentService savedokumentService=new SavedokumentService();
+		savedokumentService.insert();
 		
 		
-		System.out.println(SavedokumentService.convertToPLN(20));
-		
-		System.out.println(SavedokumentService.convertToPLN(10, "eur"));
-		System.out.println(SavedokumentService.convertTPLN(10, "eur",LocalDate.parse("2021-03-14")));
+//		String a="a";
+//		String b="a";
+//	String c=new String("a");
+//		System.out.println(a==b);
+//		System.out.println(a==c);
+//	System.out.println(c.eq);
+//		
 		
 
 	}

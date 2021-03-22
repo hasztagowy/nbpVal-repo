@@ -1,4 +1,4 @@
-package maven;
+package maven.entity;
 
 import java.math.BigDecimal;
 
