@@ -5,7 +5,7 @@
     <classes>
       <class name="maven.ConnectorTest">
         <methods>
-          <include name="exceptionDataNotExistTest1"/>
+          <include name="exceptionDataNotExistTest"/>
         </methods>
       </class> <!-- maven.ConnectorTest -->
     </classes>

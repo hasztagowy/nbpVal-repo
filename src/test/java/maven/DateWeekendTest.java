@@ -1,8 +1,10 @@
 package maven;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
+
 import java.time.LocalDate;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import maven.valid.DateValidator;
@@ -21,7 +23,7 @@ public class DateWeekendTest {
 		LocalDate fridayFromValid = dateValid.minusWeekend(saturday);
 
 		// then:
-		Assert.assertEquals(friday, fridayFromValid);
+		assertEquals(friday, fridayFromValid);
 	}
 
 	@Test
@@ -34,7 +36,7 @@ public class DateWeekendTest {
 		LocalDate fridayFromValid = dateValid.minusWeekend(sunday);
 
 		// then:
-		Assert.assertEquals(friday, fridayFromValid);
+		assertEquals(friday, fridayFromValid);
 
 	}
 
@@ -47,7 +49,7 @@ public class DateWeekendTest {
 		LocalDate fridayFromValid = dateValid.minusWeekend(sunday);
 
 		// then:
-		Assert.assertNotEquals(sunday, fridayFromValid);
+		assertNotEquals(sunday, fridayFromValid);
 
 	}
 }

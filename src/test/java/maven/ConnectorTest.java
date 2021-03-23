@@ -21,27 +21,14 @@ public class ConnectorTest {
 		Throwable throwable;
 		BigDecimal value = new BigDecimal(10);
 		LocalDate date = LocalDate.parse("2020-12-26");
+		CurrencyConverter currencyConverter = new CurrencyConverter();
 
 		// when:
-		throwable = catchThrowable(() -> CurrencyConverter.convertToPLN(value, "eur", date));
+		throwable = catchThrowable(() -> currencyConverter.convertToPLN(value, "eur", date));
 
 		// then:
 		assertThat(throwable).isInstanceOf(DataNotExistException.class);
 
-	}
-
-	@Test
-	public void exceptionDataNotExistTest1() {
-		// given:
-		Throwable throwable;
-		BigDecimal value = new BigDecimal(10);
-		LocalDate date = LocalDate.parse("2019-12-26");
-
-		// when:
-		throwable = catchThrowable(() -> CurrencyConverter.convertToPLN(value, "eur", date));
-
-		// then:
-		assertThat(throwable).isInstanceOf(DataNotExistException.class);
 	}
 
 }

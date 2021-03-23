@@ -1,8 +1,9 @@
 package maven;
 
+import static org.testng.Assert.assertEquals;
+
 import java.time.LocalDate;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import maven.valid.DateValidator;
@@ -24,7 +25,7 @@ public class BackDayTest {
 		LocalDate yesterdayFromdateValid = dateValid.backDays(today, howManyDays);
 
 		// then:
-		Assert.assertEquals(yesterday, yesterdayFromdateValid);
+		assertEquals(yesterday, yesterdayFromdateValid);
 	}
 
 	@Test
@@ -40,7 +41,7 @@ public class BackDayTest {
 		LocalDate fridayFromdateValid = dateValid.backDays(monday, howManyDays);
 
 		// then:
-		Assert.assertEquals(friday, fridayFromdateValid);
+		assertEquals(friday, fridayFromdateValid);
 	}
 
 	@Test
@@ -55,7 +56,7 @@ public class BackDayTest {
 		LocalDate fridayFromdateValid = dateValid.backDays(monday, howManyDays);
 
 		// then:
-		Assert.assertEquals(friday, fridayFromdateValid);
+		assertEquals(friday, fridayFromdateValid);
 	}
 
 	@Test
@@ -70,7 +71,7 @@ public class BackDayTest {
 		LocalDate thusdayFromdateValid = dateValid.backDays(monday, howManyDays);
 
 		// then:
-		Assert.assertEquals(thusday, thusdayFromdateValid);
+		assertEquals(thusday, thusdayFromdateValid);
 	}
 
 }
