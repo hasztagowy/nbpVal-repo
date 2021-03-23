@@ -12,7 +12,7 @@ public class SavedokumentService {
 
 		BigDecimal userVal = new BigDecimal(10);
 
-		BigDecimal res = currencyConverter.convertToPLN(userVal, "eur", LocalDate.now());
+		BigDecimal res = currencyConverter.convertToPLN(userVal, "eur", LocalDate.parse("2020-12-26"));
 		System.out.println(res);
 
 	}

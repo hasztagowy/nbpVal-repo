@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-22T11:52:58Z" name="Default suite" finished-at="2021-03-22T11:52:58Z" duration-ms="32">
+  <suite started-at="2021-03-23T09:37:29Z" name="Default suite" finished-at="2021-03-23T09:37:29Z" duration-ms="47">
     <groups>
     </groups>
-    <test started-at="2021-03-22T11:52:58Z" name="Default test" finished-at="2021-03-22T11:52:58Z" duration-ms="32">
-      <class name="maven.BackDayTest">
-        <test-method signature="testBackWeekend3()[pri:0, instance:maven.BackDayTest@6e01f9b0]" started-at="2021-03-22T12:52:58Z" name="testBackWeekend3" finished-at="2021-03-22T12:52:58Z" duration-ms="17" status="PASS">
+    <test started-at="2021-03-23T09:37:29Z" name="Default test" finished-at="2021-03-23T09:37:29Z" duration-ms="47">
+      <class name="maven.DateWeekendTest">
+        <test-method signature="testChangeDateIfIsAWeekend1()[pri:0, instance:maven.DateWeekendTest@389c4eb1]" started-at="2021-03-23T10:37:29Z" name="testChangeDateIfIsAWeekend1" finished-at="2021-03-23T10:37:29Z" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBackWeekend3 -->
-      </class> <!-- maven.BackDayTest -->
+        </test-method> <!-- testChangeDateIfIsAWeekend1 -->
+      </class> <!-- maven.DateWeekendTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -28,8 +28,14 @@ public class DateValidTest {
 	void testDateFromFuture2() {
 		// given:
 		DateValidator dateValid = new DateValidator();
+		LocalDate dayFromFuture = LocalDate.now().plusDays(1);
+		boolean isFuture = true;
 
-		Assert.assertEquals(false, dateValid.checkIfDateisFromFuture(LocalDate.parse("2002-02-02")));
+		// when:
+		boolean resultValidFutureDay = dateValid.checkIfDateisFromFuture(dayFromFuture);
+
+		// then:
+		Assert.assertEquals(isFuture, resultValidFutureDay);
 	}
 
 	@Test
@@ -37,12 +43,12 @@ public class DateValidTest {
 		// given:
 		DateValidator dateValid = new DateValidator();
 		LocalDate dayFromFuture = LocalDate.parse("2022-02-02");
-		boolean isFuture = false;
+		boolean isFuture = true;
 
 		// when:
 		boolean resultValidFutureDay = dateValid.checkIfDateisFromFuture(dayFromFuture);
 
-		// then::
+		// then:
 		Assert.assertEquals(isFuture, resultValidFutureDay);
 	}
 

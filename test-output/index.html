@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse--1409400196\testng-customsuite.xml</span>
+                    <span>C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse-148431745\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="maven.BackDayTest" class="method navigator-link" hash-for-method="testBackWeekend3">testBackWeekend3</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="maven.DateWeekendTest" class="method navigator-link" hash-for-method="testChangeDateIfIsAWeekend1">testChangeDateIfIsAWeekend1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">maven.BackDayTest</span>
+              <span class="class-name">maven.DateWeekendTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testBackWeekend3">
-                  </a> <!-- testBackWeekend3 -->
-                  <span class="method-name">testBackWeekend3</span>
+                  <a name="testChangeDateIfIsAWeekend1">
+                  </a> <!-- testChangeDateIfIsAWeekend1 -->
+                  <span class="method-name">testChangeDateIfIsAWeekend1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse--1409400196\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse-148431745\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;maven.BackDayTest&quot;&gt;
+      &lt;class name=&quot;maven.DateWeekendTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testBackWeekend3&quot;/&gt;
+          &lt;include name=&quot;testChangeDateIfIsAWeekend1&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- maven.BackDayTest --&gt;
+      &lt;/class&gt; &lt;!-- maven.DateWeekendTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testBackWeekend3')
-data.setCell(0, 2, 'maven.BackDayTest')
-data.setCell(0, 3, 17);
+data.setCell(0, 1, 'testChangeDateIfIsAWeekend1')
+data.setCell(0, 2, 'maven.DateWeekendTest')
+data.setCell(0, 3, 20);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 ms</span>
+              <span class="suite-total-time">Total running time: 20 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,17 +212,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">maven.BackDayTest</span>
+              <span class="ignored-class-name">maven.DateWeekendTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testBackWeekend</span>
+                <span class="ignored-method-name">testChangeDateIfIsAWeekend2</span>
                 <br/>
-                <span class="ignored-method-name">testBackWeekend2</span>
-                <br/>
-                <span class="ignored-method-name">testBackDay</span>
+                <span class="ignored-method-name">testChangeDateIfIsAWeekend</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -234,9 +232,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">maven.BackDayTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">maven.DateWeekendTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testBackWeekend3</span>
+                <span class="method-name">testChangeDateIfIsAWeekend1</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

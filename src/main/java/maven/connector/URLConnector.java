@@ -28,20 +28,15 @@ public class URLConnector implements ConnectStrategy {
 		}
 	}
 
-	public boolean checkConnection(String urlText) {
-		try {
+	public boolean checkConnection(String urlText) throws IOException {
 
-			URL myUrl = new URL(urlText);
-			StringBuilder text = new StringBuilder();
-			try (InputStream myInputStream = myUrl.openStream(); Scanner scanner = new Scanner(myInputStream)) {
-				return scanner.hasNextLine();
+		URL myUrl = new URL(urlText);
+		StringBuilder text = new StringBuilder();
+		try (InputStream myInputStream = myUrl.openStream(); Scanner scanner = new Scanner(myInputStream)) {
+			return scanner.hasNextLine();
 
-			} catch (ConnectException e) {
-				throw new HttpConnectFailException("cant connect to:" + e);
-			}
-		} catch (IOException e) {
-			throw new DataNotExistException("\n Cant open file! " + e);
 		}
+
 	}
 
 }
