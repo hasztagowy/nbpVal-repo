@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-import maven.exception.DataNotExistException;
+import maven.exception.DataNotFoundException;
 
 public class FileConnector implements ConnectStrategy {
 
@@ -21,7 +21,7 @@ public class FileConnector implements ConnectStrategy {
 				return textFromFile.toString();
 			}
 		} catch (IOException e) {
-			throw new DataNotExistException("can't read file! " + e);
+			throw new DataNotFoundException("can't read file! " + e);
 		}
 	}
 

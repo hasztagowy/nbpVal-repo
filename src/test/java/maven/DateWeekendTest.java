@@ -1,7 +1,6 @@
 package maven;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotEquals;
 
 import java.time.LocalDate;
 
@@ -14,7 +13,7 @@ public class DateWeekendTest {
 	DateValidator dateValid = new DateValidator();
 
 	@Test
-	void testChangeDateIfIsAWeekend() {
+	void should_return_friday_from_minusWeekend1() {
 		// given:
 		LocalDate friday = LocalDate.parse("2021-03-19");
 		LocalDate saturday = LocalDate.parse("2021-03-20");
@@ -27,7 +26,7 @@ public class DateWeekendTest {
 	}
 
 	@Test
-	void testChangeDateIfIsAWeekend1() {
+	void should_return_friday_from_minusWeekend2() {
 		// given:
 		LocalDate friday = LocalDate.parse("2021-03-19");
 		LocalDate sunday = LocalDate.parse("2021-03-21");
@@ -37,19 +36,6 @@ public class DateWeekendTest {
 
 		// then:
 		assertEquals(friday, fridayFromValid);
-
-	}
-
-	@Test
-	void testChangeDateIfIsAWeekend2() {
-		// given:
-		LocalDate sunday = LocalDate.parse("2021-03-21");
-
-		// when:
-		LocalDate fridayFromValid = dateValid.minusWeekend(sunday);
-
-		// then:
-		assertNotEquals(sunday, fridayFromValid);
 
 	}
 }

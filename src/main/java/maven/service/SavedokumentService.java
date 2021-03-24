@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import maven.CurrencyConverter;
+import maven.entity.CurrencyResoult;
 
 public class SavedokumentService {
 
@@ -12,8 +13,8 @@ public class SavedokumentService {
 
 		BigDecimal userVal = new BigDecimal(10);
 
-		BigDecimal res = currencyConverter.convertToPLN(userVal, "eur", LocalDate.parse("2020-12-28"));
-		System.out.println(res);
+		CurrencyResoult res = currencyConverter.convertToPLN(userVal, "eur", LocalDate.now());
+		System.out.println(res.getResoult());
 
 	}
 

@@ -10,10 +10,8 @@ import maven.valid.DateValidator;
 
 public class BackDayTest {
 
-	DateValidator dateValid = new DateValidator();
-
 	@Test
-	void testBackDay() {
+	void should_return_yesterday_or_if_is_a_weekend_friday() {
 
 		// given:
 		DateValidator dateValid = new DateValidator();
@@ -29,7 +27,7 @@ public class BackDayTest {
 	}
 
 	@Test
-	void testBackWeekend() {
+	void should_return_friday_from_backDays() {
 
 		// given:
 		DateValidator dateValid = new DateValidator();
@@ -45,7 +43,7 @@ public class BackDayTest {
 	}
 
 	@Test
-	void testBackWeekend2() {
+	void should_return_friday2_from_backDays() {
 		// given:
 		DateValidator dateValid = new DateValidator();
 		LocalDate monday = LocalDate.parse("2021-03-22");
@@ -60,7 +58,7 @@ public class BackDayTest {
 	}
 
 	@Test
-	void testBackWeekend3() {
+	void should_return_thusday_from_backDays() {
 		// given:
 		DateValidator dateValid = new DateValidator();
 		LocalDate monday = LocalDate.parse("2021-03-22");

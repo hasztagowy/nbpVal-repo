@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse--1984246585\testng-customsuite.xml</span>
+                    <span>C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse--1721566913\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="maven.BackDayTest" class="method navigator-link" hash-for-method="testBackWeekend">testBackWeekend</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="maven.CurrencyMethodsTest" class="method navigator-link" hash-for-method="should_return_date_from_last_avilable_data">should_return_date_from_last_avilable_data</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">maven.BackDayTest</span>
+              <span class="class-name">maven.CurrencyMethodsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testBackWeekend">
-                  </a> <!-- testBackWeekend -->
-                  <span class="method-name">testBackWeekend</span>
+                  <a name="should_return_date_from_last_avilable_data">
+                  </a> <!-- should_return_date_from_last_avilable_data -->
+                  <span class="method-name">should_return_date_from_last_avilable_data</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse--1984246585\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\robert.baczkiewicz\AppData\Local\Temp\testng-eclipse--1721566913\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;maven.BackDayTest&quot;&gt;
+      &lt;class name=&quot;maven.CurrencyMethodsTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testBackWeekend&quot;/&gt;
+          &lt;include name=&quot;should_return_date_from_last_avilable_data&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- maven.BackDayTest --&gt;
+      &lt;/class&gt; &lt;!-- maven.CurrencyMethodsTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testBackWeekend')
-data.setCell(0, 2, 'maven.BackDayTest')
-data.setCell(0, 3, 15);
+data.setCell(0, 1, 'should_return_date_from_last_avilable_data')
+data.setCell(0, 2, 'maven.CurrencyMethodsTest')
+data.setCell(0, 3, 394);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 ms</span>
+              <span class="suite-total-time">Total running time: 394 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -216,13 +216,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">maven.BackDayTest</span>
+              <span class="ignored-class-name">maven.CurrencyMethodsTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testBackWeekend3</span>
+                <span class="ignored-method-name">should_return_dolar_exchange_rate_from_friday</span>
                 <br/>
-                <span class="ignored-method-name">testBackWeekend2</span>
+                <span class="ignored-method-name">should_throw_DataNotExistException_when_cant_get_data_ten_times</span>
                 <br/>
-                <span class="ignored-method-name">testBackDay</span>
+                <span class="ignored-method-name">should_return_dolar_exchange_rate_from_last_friday_before_weekend</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -234,9 +234,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">maven.BackDayTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">maven.CurrencyMethodsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testBackWeekend</span>
+                <span class="method-name">should_return_date_from_last_avilable_data</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

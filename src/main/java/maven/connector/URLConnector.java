@@ -6,7 +6,7 @@ import java.net.ConnectException;
 import java.net.URL;
 import java.util.Scanner;
 
-import maven.exception.DataNotExistException;
+import maven.exception.DataNotFoundException;
 import maven.exception.HttpConnectFailException;
 
 public class URLConnector implements ConnectStrategy {
@@ -24,7 +24,7 @@ public class URLConnector implements ConnectStrategy {
 				throw new HttpConnectFailException("Faild to connect server");
 			}
 		} catch (IOException e) {
-			throw new DataNotExistException("\ncant read data! " + e);
+			throw new DataNotFoundException("\ncant read data! " + e);
 		}
 	}
 

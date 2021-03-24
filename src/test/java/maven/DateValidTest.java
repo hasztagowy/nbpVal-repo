@@ -10,7 +10,7 @@ import maven.valid.DateValidator;
 public class DateValidTest {
 
 	@Test
-	void testDateFromFuture() {
+	void should_return_false_from_checkIfDateisFromFuture() {
 
 		// given:
 		DateValidator dateValid = new DateValidator();
@@ -25,7 +25,7 @@ public class DateValidTest {
 	}
 
 	@Test
-	void testDateFromFuture2() {
+	void should_return_true_if_date_is_from_future() {
 		// given:
 		DateValidator dateValid = new DateValidator();
 		LocalDate dayFromFuture = LocalDate.now().plusDays(1);
@@ -39,24 +39,10 @@ public class DateValidTest {
 	}
 
 	@Test
-	void testDataFromFuture3() {
+	void should_return_same_date() {
 		// given:
 		DateValidator dateValid = new DateValidator();
-		LocalDate dayFromFuture = LocalDate.parse("2022-02-02");
-		boolean isFuture = true;
-
-		// when:
-		boolean resultValidFutureDay = dateValid.checkIfDateisFromFuture(dayFromFuture);
-
-		// then:
-		Assert.assertEquals(isFuture, resultValidFutureDay);
-	}
-
-	@Test
-	void testDateValid() {
-		// given:
-		DateValidator dateValid = new DateValidator();
-		LocalDate monday = LocalDate.parse("2021-03-18");
+		LocalDate monday = LocalDate.parse("2021-03-15");
 
 		// when:
 		LocalDate getMonday = dateValid.getValidDate(monday);

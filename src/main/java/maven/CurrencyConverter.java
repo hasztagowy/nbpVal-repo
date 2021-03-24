@@ -4,53 +4,61 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import maven.controller.MathOperator;
+import maven.convert.Converter;
+import maven.convert.ConverterJSONFromNBPToObject;
 import maven.entity.Currency;
-import maven.exception.DataNotExistException;
-import maven.service.CurrencyServiceStategy;
+import maven.entity.CurrencyResoult;
+import maven.exception.DataIsNullException;
+import maven.service.CurrencyService;
 import maven.service.NBPService;
 import maven.valid.DateValidator;
 
 public class CurrencyConverter {
 
-	private CurrencyServiceStategy currencyServiceStategy;
+	private CurrencyService currencyServiceProvider;
+	private Converter converter;
 
 	public CurrencyConverter() {
-		this.currencyServiceStategy = new NBPService();
+		this.currencyServiceProvider = new NBPService();
+		this.converter = new ConverterJSONFromNBPToObject();
 	}
 
-	public CurrencyConverter(CurrencyServiceStategy currencyServiceStategy) {
-		this.currencyServiceStategy = currencyServiceStategy;
-
+	public CurrencyConverter(CurrencyService currencyServiceStategy) {
+		this.currencyServiceProvider = currencyServiceStategy;
+		this.converter = converter;
 	}
 
-	public BigDecimal convertToPLN(BigDecimal decimal, String currCode, LocalDate localDate) {
-		DateValidator dateValid = new DateValidator();
-
-		localDate = dateValid.getValidDate(localDate);
-
-		Currency currency = getValue(currencyServiceStategy, currCode, localDate);
-
-		return MathOperator.calculate(decimal, currency.getRates()[0].getMid());
+	public CurrencyConverter(Converter converter) {
+		this.converter = converter;
 	}
 
-	private Currency getValue(CurrencyServiceStategy currencyServiceStategy, String currCode, LocalDate localDate) {
-		Currency currency = new Currency();
+	public CurrencyResoult convertToPLN(BigDecimal decimal, String currCode, LocalDate localDate) {
+
+		DateValidator.getValidDate(localDate);
+
+		String data = getDataInString(currCode, localDate);
+
+		Currency currency = converter.covert(data);
+
+		CurrencyResoult currencyResoult = new CurrencyResoult(currency, decimal);
+
+		return currencyResoult;
+	}
+
+	private String getDataInString(String currCode, LocalDate localDate) {
 		int tryToConnect = 10;
 
 		while (true) {
 			try {
-				currency = currencyServiceStategy.getCurrencyRecord(currCode, localDate);
-				if (currency.getRates()[0].getMid() != null) {
-					System.out.println(localDate);
-					tryToConnect--;
-					return currency;
+				String data = currencyServiceProvider.getCurrencyData(currCode, localDate);
+				if (data != null) {
+					return data;
 				}
 			} catch (IOException e) {
 				localDate = localDate.minusDays(1);
 				tryToConnect--;
 				if (tryToConnect == 0) {
-					throw new DataNotExistException("cant get data from " + e.getLocalizedMessage());
+					throw new DataIsNullException("cant get data from " + e.getLocalizedMessage());
 				}
 			}
 

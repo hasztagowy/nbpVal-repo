@@ -6,7 +6,7 @@ import java.time.LocalTime;
 
 public class DateValidator {
 
-	public boolean checkIfDateIsAWeekend(LocalDate localDate) {
+	public static boolean checkIfDateIsAWeekend(LocalDate localDate) {
 		if (localDate.getDayOfWeek().equals(DayOfWeek.SATURDAY))
 			return true;
 		if (localDate.getDayOfWeek().equals(DayOfWeek.SUNDAY))
@@ -14,7 +14,7 @@ public class DateValidator {
 		return false;
 	}
 
-	public LocalDate minusWeekend(LocalDate localDate) {
+	public static LocalDate minusWeekend(LocalDate localDate) {
 		if (localDate.getDayOfWeek().equals(DayOfWeek.SATURDAY)) {
 			localDate = localDate.minusDays(1);
 		} else if (localDate.getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
@@ -24,15 +24,15 @@ public class DateValidator {
 
 	}
 
-	public boolean checkIfDateisFromFuture(LocalDate localDate) {
+	public static boolean checkIfDateisFromFuture(LocalDate localDate) {
 		return localDate.isAfter(LocalDate.now());
 	}
 
-	public boolean checkIfTimeIsBefore12() {
+	public static boolean checkIfTimeIsBefore12() {
 		return LocalTime.now().isBefore(LocalTime.parse("12:00"));
 	}
 
-	public LocalDate backDays(LocalDate localDate, int days) {
+	public static LocalDate backDays(LocalDate localDate, int days) {
 		localDate = localDate.minusDays(days);
 
 		if (checkIfDateIsAWeekend(localDate)) {
@@ -42,7 +42,7 @@ public class DateValidator {
 
 	}
 
-	public LocalDate getValidDate(LocalDate localDate) {
+	public static LocalDate getValidDate(LocalDate localDate) {
 
 		if (checkIfDateisFromFuture(localDate)) {
 			localDate = LocalDate.now();

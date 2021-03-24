@@ -9,14 +9,14 @@ import java.time.LocalDate;
 import org.testng.annotations.Test;
 
 import maven.connector.FileConnector;
-import maven.exception.DataNotExistException;
+import maven.exception.DataNotFoundException;
 
 public class ConnectorTest {
 
 	FileConnector fileConnector = new FileConnector();
 
 	@Test
-	public void exceptionDataNotExistTest() {
+	public void should_throw_DataNotExistException() {
 		// given:
 		Throwable throwable;
 		BigDecimal value = new BigDecimal(10);
@@ -27,7 +27,7 @@ public class ConnectorTest {
 		throwable = catchThrowable(() -> currencyConverter.convertToPLN(value, "eur", date));
 
 		// then:
-		assertThat(throwable).isInstanceOf(DataNotExistException.class);
+		assertThat(throwable).isInstanceOf(DataNotFoundException.class);
 
 	}
 
