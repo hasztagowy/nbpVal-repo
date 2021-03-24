@@ -8,12 +8,9 @@ import java.time.LocalDate;
 
 import org.testng.annotations.Test;
 
-import maven.connector.FileConnector;
 import maven.exception.DataNotFoundException;
 
 public class ConnectorTest {
-
-	FileConnector fileConnector = new FileConnector();
 
 	@Test
 	public void should_throw_DataNotExistException() {
